@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+.env
+
+# PyInstaller / local packaging artifacts (versioned installers live under vX.Y/)
+build/
+dist/
+*.spec.bak
+*.log
+
+# Game runtime / local data
+highscores.json
+**/highscores.json
+*.tmp
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Git LFS
+*.exe.filter
