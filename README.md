@@ -19,7 +19,7 @@ Download and run the setup package from this repository:
 
 - **[v1.0/Cipher_v1.0_Setup.exe](./v1.0/Cipher_v1.0_Setup.exe)** — one-click install, Desktop + Start Menu shortcuts, no Python required
 
-Or grab the same build from the [**Releases**](https://github.com/kxz0tn/Cipher/releases) page when available.
+Or grab the same build from the [**Releases**](https://github.com/kxz0tn/Cipher/releases) page: **[Cipher_v1.0_Setup.exe](https://github.com/kxz0tn/Cipher/releases/download/v1.0/Cipher_v1.0_Setup.exe)**
 
 ### Run from source
 
