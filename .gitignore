@@ -9,17 +9,19 @@ __pycache__/
 venv/
 .env
 
-# PyInstaller / local packaging artifacts (versioned installers live under vX.Y/)
+# PyInstaller / packaging binaries (installers live on GitHub Releases only)
 build/
 dist/
-*.spec.bak
-*.log
+Installer/
+installer/
+*.exe
+*.msi
+*.iss
 
 # Game runtime / local data
 highscores.json
 **/highscores.json
-*.tmp
-*.bak
+*.log
 
 # OS / editor
 .DS_Store
@@ -33,5 +35,6 @@ Desktop.ini
 .mypy_cache/
 .cache/
 
-# Git LFS
-*.exe.filter
+# Temporary
+*.tmp
+*.bak

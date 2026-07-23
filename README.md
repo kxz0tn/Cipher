@@ -15,15 +15,13 @@
 
 ### Windows installer (recommended)
 
-Download and run the setup package from this repository:
+Download the latest setup from the [**Releases**](https://github.com/kxz0tn/Cipher/releases) page:
 
-- **[v1.0/Cipher_v1.0_Setup.exe](./v1.0/Cipher_v1.0_Setup.exe)** — one-click install, Desktop + Start Menu shortcuts, no Python required
-
-Or grab the same build from the [**Releases**](https://github.com/kxz0tn/Cipher/releases) page: **[Cipher_v1.0_Setup.exe](https://github.com/kxz0tn/Cipher/releases/download/v1.0/Cipher_v1.0_Setup.exe)**
+- **[Cipher_v1.0_Setup.exe](https://github.com/kxz0tn/Cipher/releases/download/v1.0/Cipher_v1.0_Setup.exe)** — one-click install, desktop shortcut, no Python required
 
 ### Run from source
 
-See [v1.0/README.md](./v1.0/README.md) for Python setup, controls, and packaging notes.
+See [v1.0/README.md](./v1.0/README.md) for Python setup and controls.
 
 ```bash
 cd v1.0
@@ -39,19 +37,21 @@ python main.py
 
 ```
 Cipher/
-├── v1.0/                 # Versioned release (self-contained)
+├── v1.0/                 # Versioned source release
 │   ├── main.py
-│   ├── cipher/           # Game package (source + original assets)
-│   ├── logo.png          # Branding
-│   ├── cipher.ico        # Windows icon
-│   ├── installer/        # Inno Setup script
-│   ├── Cipher_v1.0_Setup.exe
+│   ├── cipher/           # Game package + original assets
+│   ├── logo.png / cipher.ico
+│   ├── requirements.txt
 │   └── README.md
 ├── README.md             # This overview
+├── LICENSE
 └── .gitignore
 ```
 
-Version folders stay self-contained so future releases can land as **`v1.1/`**, **`v1.2/`**, and so on without disturbing older lines.
+Versioned folders keep each public release self-contained and easy to archive.  
+Future lines ship as **`v1.1/`**, **`v1.2/`**, and so on.
+
+Installers and packaged `.exe` builds are **not** stored in the repository — only on [Releases](https://github.com/kxz0tn/Cipher/releases).
 
 ---
 
@@ -61,7 +61,7 @@ Version folders stay self-contained so future releases can land as **`v1.1/`**, 
 - **Three arenas** — Neon Sphere, Debris Field, Gravity Well  
 - **Quick Match & Challenge Mode** — pick arena/difficulty or climb the ladder  
 - **Power-ups** — speed, shield, overdrive, multi-ball, gravity flip  
-- **Procedural audio** — synth music and SFX (no third-party sample packs)  
+- **Procedural audio** — synth music and SFX  
 - **High scores** — unique names, wins only; stored under `%LocalAppData%\Cipher\`  
 
 ---
@@ -69,8 +69,7 @@ Version folders stay self-contained so future releases can land as **`v1.1/`**, 
 ## Links
 
 - **Source (v1.0):** [v1.0/](./v1.0/)  
-- **Installer:** [v1.0/Cipher_v1.0_Setup.exe](./v1.0/Cipher_v1.0_Setup.exe)  
-- **Releases:** [github.com/kxz0tn/Cipher/releases](https://github.com/kxz0tn/Cipher/releases)  
+- **Releases / installer:** [github.com/kxz0tn/Cipher/releases](https://github.com/kxz0tn/Cipher/releases)  
 - **Issues:** [github.com/kxz0tn/Cipher/issues](https://github.com/kxz0tn/Cipher/issues)  
 
 ---
@@ -78,6 +77,6 @@ Version folders stay self-contained so future releases can land as **`v1.1/`**, 
 ## Credits
 
 Built with **Python** and **pygame-ce**.  
-All game code, logo, icon, art, and installer packaging in this repository are original project content.
+All game code, logo, icon, and art in this repository are original project content.
 
 **Cipher v1.0** — *Score · Defend · Dominate*.

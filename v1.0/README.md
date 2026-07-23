@@ -1,67 +1,48 @@
 # Cipher v1.0
 
-First official release of **Cipher** — a top-down neon arena sports game.
+First official source release of **Cipher** — a top-down neon arena sports game.
 
 > **Score · Defend · Dominate** · Charged hits · Dashes · Power-ups · Procedural audio
 
 ---
 
-## Play options
-
-### Windows installer (recommended)
-
-Double-click:
-
-```
-Cipher_v1.0_Setup.exe
-```
-
-The installer lets you choose the install location, creates **Desktop** and **Start Menu** shortcuts, and includes a full uninstaller. No Python install required.
-
-### Run from source
-
-**Requirements**
+## Requirements
 
 - **Python** 3.11+ (3.13 recommended)
 - **pygame-ce** (see `requirements.txt`)
 
 ```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
-# source .venv/bin/activate
-
 pip install -r requirements.txt
-python main.py
 ```
 
 ---
 
-## Layout
+## Run from source
+
+From this folder (`v1.0/`):
+
+```bash
+python main.py
+```
+
+**Expected layout:**
 
 ```
 v1.0/
-├── main.py                 # Entry point
+├── main.py              # Game entry point
 ├── requirements.txt
-├── build.spec              # PyInstaller one-file build
-├── cipher.ico              # App / installer icon
-├── logo.png                # Title / menu branding
-├── Cipher_v1.0_Setup.exe   # Windows installer
-├── installer/
-│   └── Cipher.iss          # Inno Setup script
-├── cipher/                 # Game package
-│   ├── app.py
-│   ├── assets/             # Original sprites, UI, logo
-│   ├── audio/              # Procedural music & SFX
+├── logo.png             # Title / menu branding
+├── cipher.ico           # Windows icon
+├── cipher/              # Game package
+│   ├── assets/          # Original sprites & UI art
+│   ├── audio/           # Procedural music & SFX
 │   ├── gameplay/
 │   ├── render/
 │   └── scenes/
-├── tests/
 └── README.md
 ```
 
-High scores and settings are **not** written next to the game. They live under:
+High scores and settings are **not** written next to the game. They are saved under:
 
 ```
 %LocalAppData%\Cipher\
@@ -109,27 +90,19 @@ This keeps saves writable after packaging and across updates.
 
 - Solid player / ball / wall physics with dash bounce  
 - Match countdown timer per arena  
-- Hard audio teardown on quit (no stuck sound)  
+- Hard audio teardown on quit  
 - Original cyberpunk logo and multi-size Windows icon  
 
 ---
 
 ## Packaging notes
 
-To rebuild the one-file game binary:
+Windows installer / one-file builds are published on the repository  
+[**Releases**](https://github.com/kxz0tn/Cipher/releases) page only:
 
-```bash
-pip install -r requirements.txt pyinstaller
-pyinstaller --noconfirm build.spec
-```
+- **[Cipher_v1.0_Setup.exe](https://github.com/kxz0tn/Cipher/releases/download/v1.0/Cipher_v1.0_Setup.exe)**
 
-To rebuild the Windows installer (requires [Inno Setup 6](https://jrsoftware.org/isinfo.php)):
-
-```bash
-ISCC installer\Cipher.iss
-```
-
-Output: `dist\Cipher_v1.0_Setup.exe` (see project packaging docs).
+Packaged binaries are **not** stored in this source tree.
 
 ---
 
@@ -140,13 +113,12 @@ This release contains **only original project content**:
 - All Python source  
 - Game art, logo, and icon created for Cipher  
 - Procedural audio implementation  
-- Installer script and packaged installer  
 
-Third-party libraries (Python, pygame-ce, PyInstaller runtime, etc.) remain under their own licenses and are dependencies or binary embeds — not claimed as original game assets.
+Third-party libraries (Python, pygame-ce, etc.) remain under their own licenses.
 
 ---
 
 ## Version
 
 **Cipher v1.0** — first official public release.  
-Future lines will ship as sibling folders (`v1.1/`, `v1.2/`, …) in the same style.
+Version name stays **v1.0** for this public source line until a future major update.
